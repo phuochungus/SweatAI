@@ -34,7 +34,9 @@ def predict():
         image = Image.open(io.BytesIO(image_bytes))
 
         classifier = pipeline(
-            "image-classification", model="Falconsai/nsfw_image_detection"
+            "image-classification",
+            model="Falconsai/nsfw_image_detection",
+            use_fast=True,
         )
         results = classifier(image)
 
