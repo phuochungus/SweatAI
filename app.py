@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, send_from_directory
 from transformers import ViTImageProcessor, AutoModelForImageClassification, pipeline
 from PIL import Image
 import io
-import torch
 
 app = Flask(__name__)
 
