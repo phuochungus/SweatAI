@@ -7,9 +7,6 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 # Set working directory
 WORKDIR /app
 
-# Create cache directory and set permissions
-RUN mkdir -p /.cache/uv && chmod 777 /.cache/uv
-
 # Copy application files
 COPY . .
 
