@@ -39,7 +39,7 @@ def predict():
         )
         results = classifier(image)
 
-        return jsonify({"results": results})
+        return jsonify(results)
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
